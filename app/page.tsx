@@ -35,7 +35,7 @@ export function generateMetadata(): Metadata {
     },
     authors: [{ name: "Rachouan Rejeb" }],
     creator: "Rachouan Rejeb",
-    publisher: "Sebastian Markbåge",
+    publisher: "Rachouan Rejeb",
     formatDetection: {
       email: false,
       address: false,
@@ -63,11 +63,11 @@ export default function Home() {
             A fullstack developer, designer and illustrator based in Portugal.
           </h1>
           <p className="text-xl text-gray-700 dark:text-white/90">
-            Currently building a Bitcoin Bank{" "}
-            <Anchor href="https://coinbits.app" target="_blank" underline>
-              @coinbits
+            Currently leading the FE team at{" "}
+            <Anchor href="https://remedymeds.com" target="_blank" underline>
+              @remedymeds
             </Anchor>
-            , and starting a Customer Support service.
+            .
           </p>
           <div className="flex gap-4">
             <Button size="lg" as={"a"} href="/book">
@@ -80,12 +80,12 @@ export default function Home() {
               href="https://www.dropbox.com/scl/fi/52v0fslwf8b33unpsev4b/rachouan_cv.pdf?rlkey=s2ee6r688wrsfijr8nc475cq2&dl=0"
               target="_blank"
             >
-              {`Resume`}
+              Resume
             </Button>
           </div>
         </Container>
       </Section>
-      <Section className="rounded-t-3xl relative overflow-hidden bg-gradient-to-b from-gray-50/30 to-white dark:from-gray-800 dark:to-gray-900 flex flex-col space-y-24">
+      <Section className="rounded-t-3xl relative overflow-hidden bg-gradient-to-b from-gray-50/30 to-white dark:from-gray-800 dark:to-gray-700 flex flex-col space-y-24">
         <Logos />
         <Testimonials />
       </Section>

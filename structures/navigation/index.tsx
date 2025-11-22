@@ -3,6 +3,7 @@ import Button from "../../components/button";
 import Container from "../../components/container";
 import Logo from "../../components/logo";
 import { Socials } from "../socials";
+import { ModeToggle } from "./mode";
 
 export function Navigation() {
   return (
@@ -17,16 +18,21 @@ export function Navigation() {
             </h1>
           </Link>
 
-          <nav className="flex items-center gap-4">
-            <Socials />
-            <Button
-              as={"a"}
-              href="/book"
-              variant="primary"
-              className="hidden md:inline-flex"
-            >
-              {`Let's Talk`}
-            </Button>
+          <nav className="flex divide-x divide-gray-50 dark:divide-gray-700">
+            <div className="flex items-center gap-4 px-4">
+              <Socials />
+              <Button
+                as={"a"}
+                href="/book"
+                variant="primary"
+                className="hidden md:inline-flex"
+              >
+                {`Let's Talk`}
+              </Button>
+            </div>
+            <div className="px-4">
+              <ModeToggle />
+            </div>
           </nav>
         </div>
       </Container>

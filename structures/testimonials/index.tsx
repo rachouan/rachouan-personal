@@ -47,7 +47,7 @@ export function Testimonials() {
   return (
     <Container size="lg">
       <div className="relative">
-        <blockquote className="relative z-10 flex flex-col space-y-8  p-6 sm:p-12 md:p-20 rounded-md bg-white dark:bg-gray-900 text-center items-center overflow-hidden">
+        <blockquote className="relative z-10 flex flex-col space-y-8  p-6 sm:p-12 md:p-20 dark:border dark:border-gray-700 dark:drop-shadow-lg rounded-md bg-white dark:bg-gray-900 text-center items-center overflow-hidden">
           <p className="text-lg opacity-50 text-center">Some kind words</p>
           <p className="text-xl md:text-2xl font-rachouan font-light">
             {description}
@@ -58,10 +58,11 @@ export function Testimonials() {
               return (
                 <button
                   key={`profile-image-${i}`}
-                  className={`w-12 h-12 bg-gray-50 rounded-full transition-all hover:opacity-100 overflow-hidden ${active
-                    ? "opacity-100 -translate-y-1 shadow-xl"
-                    : "opacity-50"
-                    }`}
+                  className={`w-12 h-12 bg-gray-50 rounded-full transition-all hover:opacity-100 overflow-hidden ${
+                    active
+                      ? "opacity-100 -translate-y-1 shadow-xl"
+                      : "opacity-50"
+                  }`}
                   onClick={() => setTestimonial(testimonial)}
                 >
                   <Image

@@ -2,37 +2,42 @@
 
 import Anchor from "@/components/anchor";
 import Container from "@/components/container";
-import Image from "next/image";
+import BarkBuildings from "./bark-buildings.svg";
+import Coinbits from "./coinbits.svg";
+import Remedymeds from "./remedymeds.svg";
+import Dogstudio from "./dogstudio.svg";
+import Winamp from "./winamp.svg";
+import HauteHijab from "./haute-hijab.svg";
 
 const logos = [
   {
     alt: "coinbits",
-    image: "coinbits.svg",
+    logo: Coinbits,
     href: "https://coinbits.app",
   },
   {
     alt: "remedymeds",
-    image: "remedymeds.svg",
+    logo: Remedymeds,
     href: "https://remedymeds.com",
   },
   {
     alt: "dogstudio",
-    image: "dogstudio.svg",
+    logo: Dogstudio,
     href: "https://dogstudio.co",
   },
   {
     alt: "bark-buildings",
-    image: "bark-buildings.svg",
+    logo: BarkBuildings,
     href: "https://barkbuildings.com",
   },
   {
     alt: "winamp",
-    image: "winamp.svg",
+    logo: Winamp,
     href: "https://winamp.com",
   },
   {
     alt: "haute-hijab",
-    image: "haute-hijab.svg",
+    logo: HauteHijab,
     href: "https://hautehijab.com",
   },
 ];
@@ -41,20 +46,14 @@ export default function Logos() {
   return (
     <Container className="px-12">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 items-center gap-y-12 gap-x-12 md:gap-y-20 md:gap-x-20">
-        {logos.map(({ image, alt, href }, i) => (
+        {logos.map(({ logo: Logo, alt, href }, i) => (
           <Anchor
             key={`logo-${i}`}
             href={href}
             target="_blank"
-            className="opacity-40 hover:opacity-100"
+            className="opacity-40 hover:opacity-100 flex items-center justify-center"
           >
-            <Image
-              src={`/logos/${image}`}
-              width={208}
-              height={48}
-              alt={alt}
-              className="fill-gray-900 dark:fill-white max-h-8 md:max-h-12 max-w-48 w-full object-contain"
-            />
+            <Logo className="fill-gray-900 dark:fill-white h-8 md:h-12 w-auto max-w-full" />
           </Anchor>
         ))}
       </div>

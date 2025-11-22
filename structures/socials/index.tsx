@@ -31,7 +31,7 @@ export function Socials() {
           key={`social-${i}`}
           href={href}
           target="_blank"
-          className="flex justify-center items-center p-1 w-10 h-10 rounded-full bg-gray-50/10 hover:bg-gray-50 dark:bg-gray-900/10 dark:hover:bg-gray-900/20 transition"
+          className="flex justify-center items-center p-1 size-10 rounded-full bg-gray-50/10 hover:bg-gray-50 dark:bg-gray-900/10 dark:hover:bg-gray-900/20 transition"
         >
           {icon}
         </Anchor>

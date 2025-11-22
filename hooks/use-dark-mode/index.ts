@@ -1,12 +1,13 @@
-"use client"
-import { create } from 'zustand'
-import { persist, createJSONStorage } from 'zustand/middleware'
+"use client";
 
-type Theme = "dark" | "light"
+import { create } from "zustand";
+import { persist, createJSONStorage } from "zustand/middleware";
+
+type Theme = "dark" | "light";
 
 interface ThemeStore {
-  theme: Theme,
-  setTheme: (theme: Theme) => void
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
 }
 
 export const useThemeStore = create<ThemeStore>()(
@@ -16,11 +17,11 @@ export const useThemeStore = create<ThemeStore>()(
       setTheme: (theme: Theme) => set({ theme }),
     }),
     {
-      name: 'rachouan-theme',
+      name: "rachouan-theme",
       storage: createJSONStorage(() => sessionStorage),
-    }
-  )
-)
+    },
+  ),
+);
 
 export default function useTheme() {
   const { theme, setTheme } = useThemeStore((state) => state);

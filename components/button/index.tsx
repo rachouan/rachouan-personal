@@ -4,17 +4,24 @@ import Spinner from "../spinner";
 const button = cva("button transition-all rounded-full", {
   variants: {
     variant: {
-      primary: "bg-denim-600 border border-denim-700 text-denim-50 hover:bg-denim-700 hover:border-denim-900",
-      secondary: "border border-gray-100 hover:border-gray-200 hover:bg-gray-50"
+      plain: "",
+      outline:
+        "border border-gray-100 hover:border-gray-200 hover:shadow-md dark:border-gray-700 dark:hover:border-gray-600",
+      icon: "bg-gray-50/10 hover:bg-gray-50 dark:bg-gray-900/10 dark:hover:bg-gray-900/20",
+      primary:
+        "bg-denim-600 border border-denim-700 text-denim-50 hover:bg-denim-700 hover:border-denim-900",
+      secondary:
+        "border border-gray-100 hover:border-gray-200 hover:bg-gray-50",
     },
     size: {
+      icon: "flex justify-center items-center p-1 size-10 rounded-full transition",
       sm: "px-2 py-1 text-xs",
       md: "px-4 py-2 text-sm",
       lg: "px-6 py-3 text-lg",
     },
     loading: {
       true: "cursor-not-allowed",
-    }
+    },
   },
   defaultVariants: {
     variant: "primary",
@@ -27,7 +34,8 @@ type ButtonProps<C extends React.ElementType> = {
   className?: string;
   loading?: boolean;
   children: React.ReactNode;
-} & React.ComponentPropsWithRef<C> & VariantProps<typeof button>;
+} & React.ComponentPropsWithRef<C> &
+  VariantProps<typeof button>;
 
 export default function Button<C extends React.ElementType>({
   as,
