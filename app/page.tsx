@@ -59,11 +59,11 @@ export default function Home() {
               className="rounded-full w-full h-full"
             />
           </div>
-          <h1 className="font-rachouan font-bold text-4xl sm:text-8xl">
-            A fullstack developer, designer and illustrator based in Portugal.
+          <h1 className="font-rachouan font-bold text-4xl sm:text-8xl text-balance">
+            Senior Software Engineer based in Lisbon, Portugal.
           </h1>
           <p className="text-xl text-gray-700 dark:text-white/90">
-            Currently leading the FE team at{" "}
+            Currently lead software engineer at{" "}
             <Anchor href="https://remedymeds.com" target="_blank" underline>
               @remedymeds
             </Anchor>
@@ -85,7 +85,7 @@ export default function Home() {
           </div>
         </Container>
       </Section>
-      <Section className="rounded-t-3xl relative overflow-hidden bg-gradient-to-b from-gray-50/30 to-white dark:from-gray-800 dark:to-gray-700 flex flex-col space-y-24">
+      <Section className="rounded-t-3xl relative overflow-hidden bg-gradient-to-b from-gray-50/30 to-white dark:from-gray-900 dark:to-gray-800 flex flex-col space-y-24">
         <Logos />
         <Testimonials />
       </Section>

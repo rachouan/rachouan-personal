@@ -11,7 +11,7 @@ const button = cva("button transition-all rounded-full", {
       primary:
         "bg-denim-600 border border-denim-700 text-denim-50 hover:bg-denim-700 hover:border-denim-900",
       secondary:
-        "border border-gray-100 hover:border-gray-200 hover:bg-gray-50",
+        "border border-gray-100 hover:border-gray-200 hover:bg-gray-50 dark:border-gray-700 dark:hover:border-gray-600 dark:hover:bg-gray-900/20",
     },
     size: {
       icon: "flex justify-center items-center p-1 size-10 rounded-full transition",

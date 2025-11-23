@@ -14,7 +14,7 @@ export default function RootLayout({
         <head />
         <body
           className={
-            "text-gray-900 dark:text-white bg-white dark:bg-gray-700 transition-all"
+            "text-gray-900 dark:text-white bg-white dark:bg-gray-800 transition-all"
           }
         >
           <ThemeProvider
