@@ -53,7 +53,7 @@ export default function Logos() {
             target="_blank"
             className="opacity-40 hover:opacity-100 flex items-center justify-center"
           >
-            <Logo className="fill-gray-900 dark:fill-white h-8 md:h-12 w-auto max-w-full" />
+            <Logo className="fill-gray-900 dark:fill-white h-8 md:h-12 w-auto" />
           </Anchor>
         ))}
       </div>
