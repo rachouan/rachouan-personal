@@ -4,6 +4,7 @@ import { forwardRef } from "react";
 const container = cva("container mx-auto px-4", {
   variants: {
     size: {
+      fluid: "max-w-full",
       sm: "max-w-screen-sm",
       md: "max-w-screen-md",
       lg: "max-w-screen-lg",
@@ -22,7 +23,7 @@ export type ContainerProps = React.HTMLAttributes<HTMLDivElement> &
 const Container = forwardRef<HTMLDivElement, ContainerProps>(
   ({ className, size, ...rest }, ref) => (
     <div ref={ref} className={container({ size, className })} {...rest} />
-  )
+  ),
 );
 
 Container.displayName = "ContainerNew";
