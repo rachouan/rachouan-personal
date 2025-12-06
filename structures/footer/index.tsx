@@ -14,61 +14,54 @@ export default function Footer({ className }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
-    <footer
-      className={clsx(
-        "bg-gray-50/30 dark:bg-gray-900 transition border-t border-gray-100 dark:border-gray-700",
-        className,
-      )}
-    >
-      <div className="overflow-hidden">
-        <Container className="relative">
-          <div className="absolute left-0 -top-10 h-4 w-full bg-gradient-to-r from-denim-700 via-pink-500 to-yellow-500 blur-xl"></div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 py-8 md:py-16">
-            <FooterStack className="col-span-2">
-              <Logo className="fill-denim-600" />
-              <h3 className="text-gray-700 dark:text-white text-lg">
-                Wanna work together?
-                <br />
-                Let’s hop on a call.
-              </h3>
-            </FooterStack>
+    <footer className={clsx("p-2", className)}>
+      <Container className="relative overflow-hidden bg-gray-50/30 dark:bg-gray-900 transition border-t border-gray-100 dark:border-gray-700 border rounded-lg">
+        <div className="absolute left-0 -top-10 h-4 w-full bg-gradient-to-r from-denim-700 via-pink-500 to-yellow-500 blur-xl"></div>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 py-8 md:py-16">
+          <FooterStack className="col-span-2">
+            <Logo className="fill-denim-600" />
+            <h3 className="text-gray-700 dark:text-white text-lg">
+              Wanna work together?
+              <br />
+              Let’s hop on a call.
+            </h3>
+          </FooterStack>
 
-            <div className="col-span-3 grid grid-cols-1 gap-8 lg:grid-cols-2">
-              <FooterStack title="Contact me">
-                <ul className="flex gap-4">
-                  <li>
-                    <Anchor href="mailto:info@rachouan.com">
-                      info@rachouan.com
-                    </Anchor>
-                  </li>
-                </ul>
-              </FooterStack>
-              <FooterStack
-                title="Join my monthly newsletter"
-                description="Get the latest information about all front end related topics."
-              >
-                <div className="flex-grow">
-                  <NewsLetter />
-                </div>
-              </FooterStack>
-            </div>
+          <div className="col-span-3 grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <FooterStack title="Contact me">
+              <ul className="flex gap-4">
+                <li>
+                  <Anchor href="mailto:info@rachouan.com">
+                    info@rachouan.com
+                  </Anchor>
+                </li>
+              </ul>
+            </FooterStack>
+            <FooterStack
+              title="Join my monthly newsletter"
+              description="Get the latest information about all front end related topics."
+            >
+              <div className="flex-grow">
+                <NewsLetter />
+              </div>
+            </FooterStack>
           </div>
-          <div className="py-4 border-t border-gray-50 dark:border-gray-600 text-gray-600 dark:text-white/80 text-sm text-center justify-between flex items-center gap-1">
-            <div className="flex items-center gap-1">
-              © {year} Rachouan - Built with
-              <Anchor
-                href={"https://nextjs.org"}
-                target="_blank"
-                className="flex items-center gap-1"
-              >
-                <IconNextJs className="w-4 h-4" />
-                Next.js
-              </Anchor>
-            </div>
-            <Socials />
+        </div>
+        <div className="py-4 border-t border-gray-50 dark:border-gray-600 text-gray-600 dark:text-white/80 text-sm text-center justify-between flex items-center gap-1">
+          <div className="flex items-center gap-1">
+            © {year} Rachouan - Built with
+            <Anchor
+              href={"https://nextjs.org"}
+              target="_blank"
+              className="flex items-center gap-1"
+            >
+              <IconNextJs className="w-4 h-4" />
+              Next.js
+            </Anchor>
           </div>
-        </Container>
-      </div>
+          <Socials />
+        </div>
+      </Container>
     </footer>
   );
 }

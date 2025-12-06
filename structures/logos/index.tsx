@@ -44,7 +44,7 @@ const logos = [
 
 export default function Logos() {
   return (
-    <Container className="px-12">
+    <Container size="xl" className="px-12">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 items-center gap-y-12 gap-x-12 md:gap-y-20 md:gap-x-20">
         {logos.map(({ logo: Logo, alt, href }, i) => (
           <Anchor

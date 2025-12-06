@@ -13,7 +13,7 @@ export default function Talk() {
           conversation!
         </p>
       </div>
-      <div className="bg-gray-50/50 border border-gray-100 rounded-md p-4">
+      <div className="bg-gray-50/50 border border-gray-100 rounded-md p-4 md:p-6 dark:bg-gray-900 dark:border-gray-700">
         <CalendarPicker />
       </div>
     </Container>

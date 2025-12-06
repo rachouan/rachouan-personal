@@ -7,8 +7,8 @@ import { ModeToggle } from "./mode";
 
 export function Navigation() {
   return (
-    <nav className="sticky top-0 left-0 z-50 w-full bg-gray-50/10 dark:bg-gray-900/50 backdrop-blur-md transition border-b border-gray-900/5 dark:border-gray-50/5">
-      <Container>
+    <nav className="sticky top-0 left-0 right-0 p-2 z-50">
+      <Container className="bg-gray-50/10 dark:bg-gray-900/50 rounded-lg border backdrop-blur-md transition border-b border-gray-900/10 dark:border-gray-700">
         <div className="flex justify-between items-center h-14 md:h-16">
           <Link href="/" className="flex items-center gap-2">
             <Logo className="size-10 fill-gray-900 dark:fill-white" />
